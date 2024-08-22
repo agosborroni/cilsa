@@ -1,0 +1,105 @@
+*{margin:0px; padding:0px;}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+h2 {
+    text-align: center; 
+    width: 100%;       
+    margin-top: 0;      
+    margin-bottom: 1vh; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="apellido"], 
+select {
+    width: 100%; 
+    padding: 4px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    font-size: 16px; 
+}
+
+.contenido {
+    background-color: white;
+    width: 20%;
+    height: 58%;
+    padding: 1vw;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+ body.contraste {
+    background-color: #000;
+    color: rgb(255, 255, 255);
+}
+
+body.contraste .contenido {
+    background-color: #1c1c1c;
+    color: rgb(255, 255, 255);
+    border: 1px solid #444444;
+}
+
+body.contraste input,
+body.contraste select {
+    background-color: #000;
+    color: rgb(255, 255, 255);
+    border: 1px solid #444444;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+
+.enviar {
+    display: block;     
+    width: 50%;          
+    padding: 10px;       
+    margin: 20px auto;   
+    background-color: #4CAF50; 
+    color: white;      
+    border: none;     
+    border-radius: 4px; 
+    cursor: pointer;    
+    text-align: center;  
+}
+
+.btn_estilo {
+    background-color: #007BFF;
+    color: white;
+}
+
+body.contraste button {
+    background-color: rgb(255, 234, 0);
+    color: black;
+}
+
+body.contraste .btn_estilo {
+    background-color: rgb(255, 234, 0);
+    color: black;
+}
+
+body.contraste .enviar {
+    background-color: rgb(255, 234, 0);
+    color: black;
+}
