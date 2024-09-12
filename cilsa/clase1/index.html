@@ -51,6 +51,7 @@
                 const pais = document.getElementById('pais').value; 
 
                 const valNombreApellido = /^[a-zA-Z]{2,}$/; 
+                const valEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
                 if(!valNombreApellido.test(nombre)) { 
                     alert('Nombre o caracteres inválidos.');
@@ -69,6 +70,12 @@
                     event.preventDefault(); 
                 } else{ 
                     alert('Los datos fueron enviados con éxito')
+                }
+
+                if(!valEmail.test(email)){ 
+                    alert('Formato de email inválido.'); 
+                    event.preventDefault(); 
+                    return; 
                 }
             }); 
 
