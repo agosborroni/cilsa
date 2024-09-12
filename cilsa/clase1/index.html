@@ -65,6 +65,12 @@
                     return;  
                 }
 
+                if(!valEmail.test(email)){ 
+                    alert('Formato de email inválido.'); 
+                    event.preventDefault(); 
+                    return; 
+                }
+
                 if(!nombre || !apellido || !email || !fecha || !pais){
                     alert('Por favor, introduzca todos los datos')
                     event.preventDefault(); 
@@ -72,11 +78,6 @@
                     alert('Los datos fueron enviados con éxito')
                 }
 
-                if(!valEmail.test(email)){ 
-                    alert('Formato de email inválido.'); 
-                    event.preventDefault(); 
-                    return; 
-                }
             }); 
 
             function cambiarEstilo(estilo){ 
