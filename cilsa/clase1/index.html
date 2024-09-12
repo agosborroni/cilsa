@@ -50,7 +50,7 @@
                 const fecha = document.getElementById('fecha').value; 
                 const pais = document.getElementById('pais').value; 
 
-                const valNombreApellido = /^[a-zA-Z]{2,}$/; 
+                const valNombreApellido = /^([a-zA-Z]{2,}\s?)+$/; 
                 const valEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
                 if(!valNombreApellido.test(nombre)) { 
@@ -71,6 +71,22 @@
                     return; 
                 }
 
+                const hoy = new Date(); 
+                const fechaNacimiento = new Date(fecha); 
+                const edad = hoy.getFullYear() - fechaNacimiento.getFullYear(); 
+                const mesDif = hoy.getMonth() - fechaNacimiento.getMonth(); 
+                const diaDif = hoy.getDay() - fechaNacimiento.getDay(); 
+                
+                if(mesDif < 0 || (mesDif === 0 && diaDif < 0)) { 
+                    edad--; 
+                }
+
+                if(edad < 18){ 
+                    alert('Debe ser mayor de 18 años.'); 
+                    event.preventDefault(); 
+                    return; 
+                }
+
                 if(!nombre || !apellido || !email || !fecha || !pais){
                     alert('Por favor, introduzca todos los datos')
                     event.preventDefault(); 
@@ -78,7 +94,7 @@
                     alert('Los datos fueron enviados con éxito')
                 }
 
-            }); 
+            });  
 
             function cambiarEstilo(estilo){ 
                 if(estilo === 'normal'){ 
