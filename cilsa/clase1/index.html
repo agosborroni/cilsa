@@ -50,6 +50,20 @@
                 const fecha = document.getElementById('fecha').value; 
                 const pais = document.getElementById('pais').value; 
 
+                const valNombreApellido = /^[a-zA-Z]{2,}$/; 
+
+                if(!valNombreApellido.test(nombre)) { 
+                    alert('Nombre o caracteres inválidos.');
+                    event.preventDefault();
+                    return;  
+                }
+
+                if(!valNombreApellido.test(apellido)) { 
+                    alert('Apellido o caracteres inválidos.');
+                    event.preventDefault();
+                    return;  
+                }
+
                 if(!nombre || !apellido || !email || !fecha || !pais){
                     alert('Por favor, introduzca todos los datos')
                     event.preventDefault(); 
