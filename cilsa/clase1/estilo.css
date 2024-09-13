@@ -84,10 +84,6 @@ button {
     text-align: center;  
 }
 
-.btn_estilo {
-    background-color: #007BFF;
-    color: white;
-}
 
 body.contraste button {
     background-color: rgb(255, 234, 0);
